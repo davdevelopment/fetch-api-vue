@@ -33,7 +33,7 @@
     },
     mounted() {
       axios
-        .get('https://cors-anywhere.herokuapp.com/https://xkcd.com/info.0.json')
+        .get(`https://cors-anywhere.herokuapp.com/https://xkcd.com/${Math.floor(Math.random() * (2529 - 1)) + 1}/info.0.json`)
         .then(response => {
           this.data = response.data
         })
